@@ -1,9 +1,8 @@
-const palindromes = function (word) {
-    let orig = word.split("");
-    let reverse = orig.reverse();
-
-    return reverse.every((item,index) => item === orig[index])
-    
+const palindromes = function (str) {
+    let checkStr = str.toLowerCase().split("").filter((alpha) => /[a-z0-9]/g.test(alpha));
+    let backward = checkStr.slice().reverse();
+  
+    return checkStr.every((element,index) => element === backward[index]);
 };
 
 // Do not edit below this line
